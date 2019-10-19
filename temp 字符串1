@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+
+<body>
+ <h2> 我的第一段java </h2> 
+ <script>  
+ 
+	const Jerry ={
+	name: 'Jerry',
+	date: '2019-10-19', 
+	todos:[
+	 {name:'Go to Store',completed:false},
+	 {name:'Match Move',completed:true},
+	 {name:'Running',completed:true},
+	]
+	}
+		
+	function renderTodos(todos){
+	return (
+	`<ul>
+	   ${todos.map(todo =>`
+	   <li>
+	   ${todo.name} ${todo.completed ? 'v' : 'x'}
+	   </li>
+	   `).join('')}
+	</ul>`
+	)}
+		
+	const template=`
+	<div class="panel">
+	<div class="panel-header">${Jerry.name}</div>
+	<div class="panel-body">
+     ${renderTodos(Jerry.todos)}
+	</div>
+	<div class="panel-footer">${Jerry.date}</div>
+	`
+	document.body.innerHTML = template;
+ </script>
+ 
+ 
+<body>
+
+</body>
+</html>
