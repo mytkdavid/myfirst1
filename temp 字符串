@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+
+<body>
+
+ <h2> 我的第一段java </h2>
+ <button type="button" onclick="document.getElementById('demo').innerHTML =Date()"> 取得日期 </button>
+ <p id="demo"></p> 
+ <p id="demo1"></p>
+ <p id="demo2"></p>
+ <script>  
+ 
+	const person ='Jerry';
+	const age =5;
+	const sentence= ` ${person}  is  ${age *5} years old `;
+	const template = `<div class="greet">
+	<p>Hello</p>
+    </div>`.trim();	
+	document.getElementById("demo1").innerHTML = sentence;
+	document.getElementById("demo2").innerHTML = template;
+	
+ </script>
+ 
+ 
+<body>
+
+</body>
+</html>
