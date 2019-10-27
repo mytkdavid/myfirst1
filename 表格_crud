@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta chartset="utf-8">
+<title> lession_2 刪除 </title>
+<script>
+  window.onload=function()
+  {
+    var oTab =document.getElementById('tab1');
+    var oBtn =document.getElementById('btn1');
+    var oNmae =document.getElementById('name');
+    var oAge =document.getElementById('age');
+    var id =oTab.tBodies[0].rows.length+1;
+    oBtn.onclick=function () 
+    {
+      var oTr =document.createElement('tr');
+      
+      var oTd =document.createElement('td');    
+      oTd.innerHTML =id++;
+      oTr.appendChild(oTd);
+      
+      var oTd =document.createElement('td');    
+      oTd.innerHTML =oNmae.value;
+      oTr.appendChild(oTd);
+      
+      var oTd =document.createElement('td');    
+      oTd.innerHTML =oAge.value;
+      oTr.appendChild(oTd);
+      
+      var oTd =document.createElement('td');    
+      oTd.innerHTML ='<a href="javascript:;">刪除</a>';
+      oTr.appendChild(oTd);
+      
+      oTd.getElementsByTagName('a')[0].onclick=function()
+      {
+          oTab.tBodies[0].removeChild(this.parentNode.parentNode);
+      };
+      
+      oTab.tBodies[0].appendChild(oTr);
+      
+    }
+    
+  };
+</script>
