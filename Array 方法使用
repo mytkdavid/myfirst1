@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta chartset="utf-8">
+<title> lession_11 Array 方法使用</title>
+<style> 
+</style>
+<script>
+ const inventory =[
+ { name: 'apples', quantity : '2'},
+ { name: 'frank', quantity : '5'},
+ { name: 'david', quantity : '12'},
+ { name: 'jack', quantity : '4'} 
+]
+ 
+/*
+ const bamanas =inventory.find(fruit =>{
+  if (fruit.name ==='frank')
+		{return true}
+		{return false}
+		});		
+		console.log(bamanas)
+*/
+
+const bamanas =inventory.find(fruit =>fruit.name ==='frank')
+       console.log(bamanas)
+	   
+const bamanasindex =inventory.findIndex(fruit =>fruit.name ==='frank')
+	   
+	  console.log(bamanasindex) 
+	 
+const isEnough =inventory.some(fruit =>fruit.quantity > 0 )
+       
+	   console.log(isEnough)
+	   
+const allEnough =inventory.every( fruit =>fruit.quantity > 0 )
+       
+	 console.log(allEnough)
+		
+</script>
+</head>
+<body>
+</body>
+</html>
