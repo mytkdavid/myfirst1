@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta chartset="utf-8">
+<title> lession_2 刪除 </title>
+<script>
+  window.onload=function()
+  {
+    var oTab =document.getElementById('tab1');
+    var oldColor='';
+   // alert(oTab.getElementsByTagName('tbody')[0].getElementsByTagName('tr')[1].getElementsByTagName('td')[1].innerHTML);
+   // alert(oTab.tBodies[0].rows[1].cells[1].innerHTML);
+    for (var i=0; i<oTab.tBodies[0].rows.length;i++)
+    {
+       oTab.tBodies[0].rows[i].onmouseover=function()
+          {
+	   oldColor=this.style.background;
+           this.style.background='green';       
+          };
+	oTab.tBodies[0].rows[i].onmouseout=function()
+          {  
+	  this.style.background=oldColor; 
+	  };
+       if (i%2)
+       {
+       oTab.tBodies[0].rows[i].style.background='';
+       }
+       else
+       {
+       oTab.tBodies[0].rows[i].style.background='yellow';
+       }
+    }
+    
+  };
+</script>
+</head>
+
+<body>
+<table id="tab1" border="1" width=200>
+   <thead>
+      <td>ID</td>
+      <td>姓名</td>
+      <td>年齡</td>
+   </thead>
+   <tbody>
+      <tr>
+        <td>1</td>
+	<td>張三</td>
+	<td>29</td>
+      </tr>
+      <tr>
+        <td>2</td>
+	<td>李四</td>
+	<td>24</td>
+      </tr>
+      <tr>
+        <td>3</td>
+	<td>王五</td>
+	<td>25</td>
+      </tr>
+    </tbody>
+</table>
+</body>
+</html>
