@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta chartset="utf-8">
+<title> lession_7 面向對向 </title>
+
+<script>
+
+   function create_persion(name,qq){
+     
+   this.name =name;
+   this.qq  =qq;
+   
+   this.showName =function ()
+   {
+   alert(this.name);
+   };
+   this.showQQ =function ()
+   {
+   alert(this.qq);
+   };
+   
+   };
+   
+   
+var obj = new create_persion('aaa','12345');
+obj.showName();
+obj.showQQ();
+var obj1 = new create_persion('bbb','34566');
+obj1.showName();
+obj1.showQQ();
+ 
+</script>
+</head>
+
+<body>
+
+
+</body>
+</html>
